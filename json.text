@@ -1,0 +1,62 @@
+// Response From https://api.themoviedb.org/3/discover/movie?api_key=${TMDB_API_KEY}
+// adult: false,
+// backdrop_path: '/uOvcyJ3XmUv4geypGvZBeZEFMO6.jpg',
+// genre_ids: [Array],
+// id: 945937,
+// original_language: 'en',
+// original_title: 'Fast Charlie',
+// overview: 'When his aging mob boss is whacked, Charlie Swift, a loyal friend and hired gun, will stop at nothing to destroy the upcoming crew that took him out.',
+// popularity: 344.362,
+// poster_path: '/3y72ffwYRUPOj4yOQbiTaN897Tm.jpg',
+// release_date: '2023-12-08',
+// title: 'Fast Charlie',
+// video: false,
+// vote_average: 6.2,
+// vote_count: 39,
+
+// Response from https://api.themoviedb.org/3/movie/109099?api_key=${TMDB_API_KEY}&append_to_response=external_ids:
+// "external_ids": {
+//     "imdb_id": "tt6722400",
+//     "wikidata_id": null,
+//     "facebook_id": null,
+//     "instagram_id": null,
+//     "twitter_id": null
+// },
+// // "status": "Released",
+// "revenue": 0,
+// "runtime": 90,
+// "popularity": 344.362,
+// "imdb_id": "tt6722400",
+//  "budget": 20000000
+
+
+// const axios = require("axios");
+// const TMDB_API_KEY = "e84a72fca7815b41c03fe50eacfa8df6";
+// let movieobj = null;
+// let page = 1;
+// let pagewiseresponse = null;
+// async function getresponse() {
+//   const response = await axios.get(
+//     `https://api.themoviedb.org/3/discover/movie?api_key=${TMDB_API_KEY}`
+//   );
+//   //   console.log(response.data.total_pages);
+//   while (response.data === null) {
+//     pagewiseresponse = await axios.get(
+//       `https://api.themoviedb.org/3/discover/movie?page=${page}&api_key=${TMDB_API_KEY}`
+//     );
+//     // movieobj = pagewiseresponse.data.results;
+//     // for (const movie of movieobj) {
+//     //   console.log(movie.id);
+//     // }
+//     console.log(pagewiseresponse.data.results.length);
+//     page++;
+//   }
+// }
+// getresponse();
+// // async function getresponse4() {
+// //   const response4 = await axios.get(
+// //     `https://api.themoviedb.org/3/movie/109099?api_key=${TMDB_API_KEY}&append_to_response=external_ids`
+// //   );
+// //   console.log(response4.data);
+// // }
+// // // getresponse4();
